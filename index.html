@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo em Loop Full Screen</title>
+    <style>
+        /* Estilo para Smart TV (Visual Limpo) */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Fundo Preto para Imersão */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Ocupa a altura total da tela */
+            width: 100vw;
+            overflow: hidden; /* Remove barras de rolagem */
+        }
+
+        .video-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* O vídeo preenche o espaço de forma responsiva */
+        #tvVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ajusta o vídeo para caber na tela sem cortar */
+            outline: none; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <video 
+            id="tvVideo" 
+            
+            src="https://www.w3schools.com/html/mov_bbb.mp4" 
+            
+            controls 
+            loop 
+            autoplay 
+            muted 
+            playsinline>
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+    </div>
+
+    </body>
+</html>
